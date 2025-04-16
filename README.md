@@ -34,18 +34,23 @@ Any use of third-party trademarks or logos are subject to those third-party's po
 
 ## Notes from workshop 15/04
 
-Create sp from portal under app registration (managed identity + secret) then add the contributor role for the rg to it.
+### FDPO internal sub
 
-the app id is the client id and the secret value the client secret for the github secrets
+Create sp from portal under app registration (managed identity + secret) then add the contributor role for the rg to it.
+The app id is the client id and the secret value the client secret for the github secrets
+Enable public access to Cosmos DB if using FDPO (internal) subscription (disabling policy)
 
 ### Run local
 
 ```bash
-cd ContosoSuitesWebAPI
+cd ContosoSuitesDashboard
 python -m streamlit run Index.py
 ```
 
 ```bash
-cd ContosoSuitesDashboard
+cd ContosoSuitesWebAPI
 dotnet run
 ```
+
+Tip: Do exercice 4 last since there is no dependencies.
+Tip: timeouts may happen if the backend hasn't been used for a while (cold start)
